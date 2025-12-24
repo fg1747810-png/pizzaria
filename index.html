@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Pizza</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header>
+    <h1>Bella Pizza 🍕</h1>
+    <p>Sabor que conquista</p>
+    <a href="#cardapio" class="btn">Ver Cardápio</a>
+</header>
+
+<section id="cardapio">
+               <input type="text" id="pesquisa" placeholder="Pesquisar pizzas..." class="pesquisa">
+
+        <div class="acao-pesquisa">
+               <a href="#finalizar" class="btn">Finalizar Pedido</a>
+        </div>
+
+    <div class="itens">
+        <div class="item">
+            <h3>Calabresa</h3>
+            <p>Molho, mussarela, calabresa e cebola</p>
+            <span>R$ 39,90</span>
+
+            <div class="acoes">
+                <button onclick="alterarPedido('Pizza Calabresa',39.9,-1)">−</button>
+                <span id="qtd-Pizza Calabresa">0</span>
+                <button onclick="alterarPedido('Pizza Calabresa',39.9,1)">+</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <h3>Frango com Catupiry</h3>
+            <p>Frango desfiado, catupiry e queijo</p>
+            <span>R$ 42,90</span>
+
+            <div class="acoes">
+                <button onclick="alterarPedido('Pizza Frango com Catupiry',42.9,-1)">−</button>
+                <span id="qtd-Pizza Frango com Catupiry">0</span>
+                <button onclick="alterarPedido('Pizza Frango com Catupiry',42.9,1)">+</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <h3>Quatro Queijos</h3>
+            <p>Mussarela, parmesão, provolone e gorgonzola</p>
+            <span>R$ 44,90</span>
+
+            <div class="acoes">
+                <button onclick="alterarPedido('Pizza Quatro Queijos',44.9,-1)">−</button>
+                <span id="qtd-Pizza Quatro Queijos">0</span>
+                <button onclick="alterarPedido('Pizza Quatro Queijos',44.9,1)">+</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pedido" id="finalizar">
+    <h2>Finalizar Pedido</h2>
+
+    <p id="resumo">Nenhuma pizza selecionada</p>
+    <p id="subtotal">Subtotal: R$ 0,00</p>
+    <p class="taxa">🚚 Taxa de entrega: R$ 5,00</p>
+    <p id="total">Total: R$ 0,00</p>
+
+    <textarea id="endereco" placeholder="Digite seu endereço completo"></textarea>
+
+    <select id="pagamento">
+        <option value="">Forma de pagamento</option>
+        <option value="Dinheiro">Dinheiro</option>
+        <option value="Pix">Pix</option>
+        <option value="Cartão">Cartão</option>
+    </select>
+
+    <button class="btn" onclick="enviarWhats()">Enviar Pedido no WhatsApp</button>
+</section>
+
+<script src="index.js"></script>
+</body>
+</html>
