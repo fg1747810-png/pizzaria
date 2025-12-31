@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizzaria Bella Massa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header class="hero">
+    <div class="overlay">
+        <h1>🍕 Bella Massa</h1>
+        <p>Pizzas artesanais feitas no forno à lenha</p>
+        <a class="btn-whats" href="https://wa.me/5587999606256" target="_blank">
+            Pedir pelo WhatsApp
+        </a>
+    </div>
+</header>
+
+<section class="sobre" id="sobre">
+    <h2>Sobre a Pizzaria</h2>
+    <p>
+        A Bella Massa nasceu da paixão por pizzas artesanais.
+        Usamos ingredientes selecionados, massa de fermentação natural
+        e muito carinho em cada receita.
+    </p>
+</section>
+
+<section class="pesquisa">
+    <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Pesquisar produto..."
+        onkeyup="searchProducts()"
+    >
+</section>
+
+<p id="noResults" style="display:none; text-align:center; margin-top:20px;">
+    ❌ Nenhum produto encontrado
+</p>
+
+<section class="cardapio" id="cardapio">
+    <h2>🍕 Cardápio</h2>
+
+    <!-- PIZZAS -->
+    <div class="produto pizza">
+        <h3>Calabresa</h3>
+        <p>Molho, mussarela, calabresa e cebola</p>
+        <span>R$ 39,90</span>
+    </div>
+
+    <div class="produto pizza">
+        <h3>Margherita</h3>
+        <p>Molho, mussarela, tomate e manjericão</p>
+        <span>R$ 42,90</span>
+    </div>
+
+    <div class="produto pizza">
+        <h3>Quatro Queijos</h3>
+        <p>Mussarela, parmesão, gorgonzola e catupiry</p>
+        <span>R$ 46,90</span>
+    </div>
+
+    <!-- BEBIDAS -->
+    <h2 id="titulo-bebidas" class="bebidas-title">🥤 Bebidas</h2>
+
+    <div class="produto bebida">
+        <h3>Coca-Cola</h3>
+        <p>Lata 350ml</p>
+        <span>R$ 6,00</span>
+    </div>
+
+    <div class="produto bebida">
+        <h3>Fanta</h3>
+        <p>Lata 350ml</p>
+        <span>R$ 6,00</span>
+    </div>
+
+    <div class="produto bebida">
+        <h3>Guaraná Antarctica</h3>
+        <p>Lata 350ml</p>
+        <span>R$ 6,00</span>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 - Pizzaria Bella Massa</p>
+    <p>📍 Centro • ⏰ 18h às 23h</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
